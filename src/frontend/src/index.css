@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #05080c;
+}
+
+canvas {
+  display: block;
+}
+
+@layer base {
+  :root {
+    --radius: 0.375rem;
+    --background: 0.09 0.012 240;
+    --foreground: 0.92 0.02 192;
+    --card: 0.12 0.015 240;
+    --card-foreground: 0.92 0.02 192;
+    --popover: 0.12 0.015 240;
+    --popover-foreground: 0.92 0.02 192;
+    --primary: 0.85 0.18 192;
+    --primary-foreground: 0.05 0.01 240;
+    --secondary: 0.55 0.25 300;
+    --secondary-foreground: 0.98 0.01 0;
+    --muted: 0.15 0.015 240;
+    --muted-foreground: 0.55 0.05 192;
+    --accent: 0.68 0.18 240;
+    --accent-foreground: 0.05 0.01 240;
+    --destructive: 0.65 0.22 30;
+    --destructive-foreground: 0.98 0.01 0;
+    --border: 0.25 0.04 192;
+    --input: 0.2 0.03 192;
+    --ring: 0.85 0.18 192;
+    --chart-1: 0.85 0.18 192;
+    --chart-2: 0.68 0.18 240;
+    --chart-3: 0.55 0.25 300;
+    --chart-4: 0.65 0.22 30;
+    --chart-5: 0.72 0.2 160;
+    --sidebar: 0.11 0.014 240;
+    --sidebar-foreground: 0.85 0.18 192;
+    --sidebar-primary: 0.85 0.18 192;
+    --sidebar-primary-foreground: 0.05 0.01 240;
+    --sidebar-accent: 0.15 0.02 240;
+    --sidebar-accent-foreground: 0.85 0.18 192;
+    --sidebar-border: 0.25 0.04 192;
+    --sidebar-ring: 0.85 0.18 192;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Bricolage Grotesque", "General Sans", system-ui, sans-serif;
+  }
+}
